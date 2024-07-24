@@ -1,0 +1,4 @@
+/home/tim/c/projects/ivsing-cross/build/build-windows/CMakeFiles/ivslib.dir
+/home/tim/c/projects/ivsing-cross/build/build-windows/CMakeFiles/ivs_executable.dir
+/home/tim/c/projects/ivsing-cross/build/build-windows/CMakeFiles/edit_cache.dir
+/home/tim/c/projects/ivsing-cross/build/build-windows/CMakeFiles/rebuild_cache.dir

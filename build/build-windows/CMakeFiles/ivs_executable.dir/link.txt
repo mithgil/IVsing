@@ -1,0 +1,3 @@
+/usr/bin/cmake -E rm -f CMakeFiles/ivs_executable.dir/objects.a
+/usr/bin/x86_64-w64-mingw32-ar qc CMakeFiles/ivs_executable.dir/objects.a @CMakeFiles/ivs_executable.dir/objects1.rsp
+/usr/bin/x86_64-w64-mingw32-g++ -Wl,--whole-archive CMakeFiles/ivs_executable.dir/objects.a -Wl,--no-whole-archive -o ivs_executable.exe -Wl,--out-implib,libivs_executable.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles/ivs_executable.dir/linklibs.rsp

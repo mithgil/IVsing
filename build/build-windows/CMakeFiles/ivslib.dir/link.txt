@@ -1,0 +1,2 @@
+/usr/bin/x86_64-w64-mingw32-ar qc libivslib.a CMakeFiles/ivslib.dir/src/ivs.cpp.obj
+/usr/bin/x86_64-w64-mingw32-ranlib libivslib.a

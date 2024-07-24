@@ -1,0 +1,1 @@
+  -L/opt/hdf5-1.14/lib  libivslib.a /opt/hdf5-1.14/lib/libhdf5_cpp.dll.a /opt/hdf5-1.14/lib/libhdf5.dll.a -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 
