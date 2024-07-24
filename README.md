@@ -312,7 +312,7 @@ There are a few ways to do this job. To cross-compile on windows is very tricky.
      
      ```c++
         //the directory of the data 
-        std::filesystem::path input_directory = "D:/DATA/20240717/1u 100pix map2";
+        std::filesystem::path input_directory = "/path/to/your/data";
         // Append the file name to the directory path
         std::filesystem::path output_file = input_directory / "ivmap.h5";
      ```
