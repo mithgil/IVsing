@@ -395,7 +395,7 @@ Contributions are welcome! Please fork the repository and submit a pull request.
 
 ## License
 
-Distributed under the GNU general public License. See LICENSE for more information.
+Distributed under the MIT general public License. See LICENSE for more information.
 
 ## Keywords
 
