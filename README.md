@@ -1,6 +1,5 @@
 # IVsing
 
-2024/7/24
 
 A c++ projet that produces a concise h5 file from a large number of txt files in experiemnts.
 --
