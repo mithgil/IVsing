@@ -5,7 +5,33 @@
 A c++ projet that produces a concise h5 file from a large number of txt files in experiemnts.
 --
 
-When IV-curve-mapping is done using Nanonis (scanning probe microscopy controller), users get a great number of data files in format of txt. It is convenient to open them by a text editor but not efficient for storing data. This is a project that extract numeric data from a large number of IV-curves written by Nanonis software and store them in a popular binary format `h5`. This is much more lightweight and data transfer can be much more expeditious. It takes about 7.8 min for transfering 10,000 data files of 140 MB size are copied to a USB stick at an approximate speed of 300 KB/s. ( less time for transfer rate at ~ 1 MB/s USB -> SSD) 
+After performing I-V curves mapping using Bias-Spectroscopy module in Nanonis (scanning probe microscopy controller, SPECS GmbH), users would get a great number of data files in format of txt. 
+```dat
+Experiment	bias spectroscopy	
+Saved Date	27.06.2025 14:44:13	
+User		
+Date		
+X (m)	-4.92857E-9	
+Y (m)	-4.92857E-9	
+Z (m)	-4.0566E-6	
+Z offset (m)	0E+0	
+Settling time (s)	100E-6	
+Integration time (s)	100E-6	
+Z-Ctrl hold	TRUE	
+Final Z (m)	N/A	
+Start time	27.06.2025 14:44:13	
+Filter type	None	
+Order		
+Cutoff frq		
+
+[DATA]
+Bias calc (V)	Current (A)
+-1.0100000E+0	-293.21839E-9
+...
+
+```
+
+It is convenient to open them by a text editor but not efficient for storing data. This is project aimas to extract numeric data from a large number of I-V curves written by Nanonis software and store them in a popular binary format `h5`. This is much more lightweight and data transfer can be much more expeditious. It takes about 7.8 min for transfering 10,000 data files of 140 MB size are copied to a USB stick at an approximate speed of 300 KB/s. ( less time for transfer rate at ~ 1 MB/s USB -> SSD) 
 
 ## Table of Contents
 
