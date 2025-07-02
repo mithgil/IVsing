@@ -50,6 +50,15 @@ It is convenient to open them by a text editor but not efficient for storing dat
 
 ## Usage
 
+Download the package
+
+```bash
+ git clone https://github.com/mithgil/IVsing.git0
+```
+
+Copy `datparser.py` and `_datparser.so` to the root directory of your project, then
+
+
 ```python
 
 import datparser
