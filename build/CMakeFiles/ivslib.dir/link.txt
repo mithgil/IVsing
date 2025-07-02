@@ -1,0 +1,1 @@
+/usr/bin/clang++ -fPIC -shared -Wl,-soname,libivslib.so -o libivslib.so CMakeFiles/ivslib.dir/src/ivs.cpp.o CMakeFiles/ivslib.dir/src/utilities.cpp.o 
