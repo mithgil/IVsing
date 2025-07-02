@@ -1,7 +1,4 @@
-# IVsing
-
-
-A c++ projet that produces a concise h5 file from a large number of txt files in experiemnts.
+# IVsing: A c++ projet that converts a myriad of dat/txt files in Bias-Sepctroscopy experiments into a structured h5.
 --
 
 After performing I-V curves mapping using Bias-Spectroscopy module in Nanonis (scanning probe microscopy controller, SPECS GmbH), users would get a great number of data files in format of txt. 
