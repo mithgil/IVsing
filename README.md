@@ -43,7 +43,7 @@ It is convenient to open them by a text editor but not efficient for storing dat
       - [Prerequisites](#prerequisites)
         - [Linux](#linux) 
         - [Windows](#windows)
-      - [SWIG]
+      - [SWIG](#SWIG)
 - [Contribution](#contribution)
 - [License](#license)
 - [Keywords](#keywords)
