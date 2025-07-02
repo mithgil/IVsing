@@ -1,0 +1,4 @@
+/home/tim/c/ivsing/build/CMakeFiles/ivslib.dir
+/home/tim/c/ivsing/build/CMakeFiles/ivs_executable.dir
+/home/tim/c/ivsing/build/CMakeFiles/edit_cache.dir
+/home/tim/c/ivsing/build/CMakeFiles/rebuild_cache.dir
