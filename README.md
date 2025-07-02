@@ -1,7 +1,9 @@
 # IVpy: A Python interface to IVsing of c++ processing
 
-A further step from [IVsing](https://github.com/mithgil/IVsing) project:
+a natural progression from former `IVsing` c++ project:
 A c++ projet that converts a myriad of dat/txt files in Bias-Sepctroscopy experiments into a structured h5.
+
+by providing a Python interface to process Bias-Spectroscopy map data files.
 
 --
 
@@ -128,7 +130,7 @@ Congrats! You will see json and h5 in your subdirectory for further processing.
 
 ### Linux
 
-0. Install some packages
+0. Install prerequisites
    
    ```bash
    sudo apt install build-essential cmake gcc g++ hdf5-tools libhdf5-dev
@@ -158,13 +160,9 @@ There are a few ways to do this job. To cross-compile on windows is very tricky.
 
 - WSL
     
-  - Install some packages:
+  - Install some packages as the previous section
     
-    ```bash
-    sudo apt update
-    sudo apt install build-essential cmake gcc g++ hdf5-tools libhdf5-dev
-    ```
-  
+
   - Navigate to the project directory
     
     ```bash
@@ -251,9 +249,9 @@ Contributions are welcome! Please fork the repository and submit a pull request.
 Distributed under the MIT general public License. See LICENSE for more information.
 
 ## Keywords
-
-- IV-curves
+- Nanonis
+- SWIG
+- Python
+- I-V curves
 - cmake
-- mingw-gcc
-- Cross-compile
-- `hdf5`
+- hdf5
