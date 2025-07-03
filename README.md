@@ -1,7 +1,6 @@
 # IVpy: A Python interface to IVsing of c++ processing
 
-a natural progression from former `IVsing` c++ project:
-A c++ projet that converts a myriad of dat/txt files in Bias-Sepctroscopy experiments into a structured h5.
+a natural progression from former `IVsing` c++ project that converts a myriad of dat/txt files in Bias-Sepctroscopy experiments into a structured h5.
 
 by providing a Python interface to process Bias-Spectroscopy map data files.
 
