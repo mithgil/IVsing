@@ -7,13 +7,6 @@ This is a natural progression from former c++ project IVsing that converts a myr
 
 By providing a Python interface to process Bias-Spectroscopy map data files, user can platform-independent and easily convert irregular, messy data into a structured one.
 
-After performing I-V curves mapping using Bias-Spectroscopy module in Nanonis (scanning probe microscopy controller, SPECS GmbH), users would get a great number of data files in format of txt. 
-
-This is a natural progression from former c++ project `IVsing` that converts a myriad of dat/txt files in Bias-Sepctroscopy experiments data into a structured h5.
-
-By providing a Python interface to process Bias-Spectroscopy map data files, user can platform-independent and easily convert irregular, messy data into a structured one.
-
-
 
 --
 
@@ -61,7 +54,6 @@ It is convenient to open them by a text editor but not efficient for storing dat
 ## Usage
 
 
-With `datparser.py` and `_datparser.so` files (Linux), 
 
 Download the package
 
@@ -72,6 +64,7 @@ Download the package
 Copy `datparser.py` and `_datparser.so` to the root directory of your project, then
 
 
+With `datparser.py` and `_datparser.so` files (Linux), 
 
 ```python
 
