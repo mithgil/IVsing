@@ -1,14 +1,23 @@
 # IVpy: A Python interface to IVsing of c++ processing
 
+
 After performing I-V curves mapping using Bias-Spectroscopy module in Nanonis (scanning probe microscopy controller, SPECS GmbH), users would get a great number of data files in format of txt.
 
 This is a natural progression from former c++ project IVsing that converts a myriad of dat/txt files in Bias-Sepctroscopy experiments data into a structured h5.
 
 By providing a Python interface to process Bias-Spectroscopy map data files, user can platform-independent and easily convert irregular, messy data into a structured one.
 
+After performing I-V curves mapping using Bias-Spectroscopy module in Nanonis (scanning probe microscopy controller, SPECS GmbH), users would get a great number of data files in format of txt. 
+
+This is a natural progression from former c++ project `IVsing` that converts a myriad of dat/txt files in Bias-Sepctroscopy experiments data into a structured h5.
+
+By providing a Python interface to process Bias-Spectroscopy map data files, user can platform-independent and easily convert irregular, messy data into a structured one.
+
+
+
 --
 
-After performing I-V curves mapping using Bias-Spectroscopy module in Nanonis (scanning probe microscopy controller, SPECS GmbH), users would get a great number of data files in format of txt. 
+
 ```dat
 Experiment	bias spectroscopy	
 Saved Date	27.06.2025 14:44:13	
@@ -39,19 +48,30 @@ It is convenient to open them by a text editor but not efficient for storing dat
 
 ## Table of Contents
 
-  - [Usage]
+  - [Usage](#Usage)
     - [Building the Project](#building-the-project)
       - [Prerequisites](#prerequisites)
         - [Linux](#linux) 
         - [Windows](#windows)
-      - [SWIG]
+      - [SWIG](#SWIG)
 - [Contribution](#contribution)
 - [License](#license)
 - [Keywords](#keywords)
 
 ## Usage
 
+
 With `datparser.py` and `_datparser.so` files (Linux), 
+
+Download the package
+
+```bash
+ git clone https://github.com/mithgil/IVsing.git0
+```
+
+Copy `datparser.py` and `_datparser.so` to the root directory of your project, then
+
+
 
 ```python
 
@@ -263,7 +283,7 @@ This will show the map data on the left and I-V curve on the right. What a nice 
 
 ### Linux
 
-0. Install some packages
+0. Install prerequisites
    
    ```bash
    sudo apt install build-essential cmake gcc g++ hdf5-tools libhdf5-dev
@@ -293,13 +313,9 @@ There are a few ways to do this job. To cross-compile on windows is very tricky.
 
 - WSL
     
-  - Install some packages:
+  - Install some packages as the previous section
     
-    ```bash
-    sudo apt update
-    sudo apt install build-essential cmake gcc g++ hdf5-tools libhdf5-dev
-    ```
-  
+
   - Navigate to the project directory
     
     ```bash
@@ -386,9 +402,9 @@ Contributions are welcome! Please fork the repository and submit a pull request.
 Distributed under the MIT general public License. See LICENSE for more information.
 
 ## Keywords
-
-- IV-curves
+- Nanonis
+- SWIG
+- Python
+- I-V curves
 - cmake
-- mingw-gcc
-- Cross-compile
-- `hdf5`
+- hdf5
