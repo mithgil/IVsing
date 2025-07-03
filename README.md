@@ -2,7 +2,7 @@
 
 After performing I-V curves mapping using Bias-Spectroscopy module in Nanonis (scanning probe microscopy controller, SPECS GmbH), users would get a great number of data files in format of txt. 
 
-This is natural progression from former `IVsing` c++ project that converts a myriad of dat/txt files in Bias-Sepctroscopy experiments data into a structured h5.
+This is a natural progression from former c++ project `IVsing` that converts a myriad of dat/txt files in Bias-Sepctroscopy experiments data into a structured h5.
 
 By providing a Python interface to process Bias-Spectroscopy map data files, user can platform-independent and easily convert irregular, messy data into a structured one.
 
