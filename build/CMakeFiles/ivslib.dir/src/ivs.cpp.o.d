@@ -328,15 +328,58 @@ CMakeFiles/ivslib.dir/src/ivs.cpp.o: /home/tim/c/ivsing/src/ivs.cpp \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/13/../../../../include/c++/13/bits/align.h \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/13/../../../../include/c++/13/bits/fs_dir.h \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/13/../../../../include/c++/13/bits/fs_ops.h \
-  /usr/bin/../lib/gcc/x86_64-linux-gnu/13/../../../../include/c++/13/map \
+  /usr/bin/../lib/gcc/x86_64-linux-gnu/13/../../../../include/c++/13/optional \
+  /usr/bin/../lib/gcc/x86_64-linux-gnu/13/../../../../include/c++/13/regex \
+  /usr/bin/../lib/gcc/x86_64-linux-gnu/13/../../../../include/c++/13/bitset \
+  /usr/bin/../lib/gcc/x86_64-linux-gnu/13/../../../../include/c++/13/stack \
+  /usr/bin/../lib/gcc/x86_64-linux-gnu/13/../../../../include/c++/13/deque \
+  /usr/bin/../lib/gcc/x86_64-linux-gnu/13/../../../../include/c++/13/bits/stl_deque.h \
+  /usr/bin/../lib/gcc/x86_64-linux-gnu/13/../../../../include/c++/13/bits/deque.tcc \
+  /usr/bin/../lib/gcc/x86_64-linux-gnu/13/../../../../include/c++/13/bits/stl_stack.h \
+  /usr/bin/../lib/gcc/x86_64-linux-gnu/13/../../../../include/c++/13/bits/std_function.h \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/13/../../../../include/c++/13/bits/stl_tree.h \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/13/../../../../include/c++/13/bits/node_handle.h \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/13/../../../../include/c++/13/bits/stl_map.h \
+  /usr/bin/../lib/gcc/x86_64-linux-gnu/13/../../../../include/c++/13/bits/regex_constants.h \
+  /usr/bin/../lib/gcc/x86_64-linux-gnu/13/../../../../include/c++/13/bits/regex_error.h \
+  /usr/bin/../lib/gcc/x86_64-linux-gnu/13/../../../../include/c++/13/bits/regex_automaton.h \
+  /usr/bin/../lib/gcc/x86_64-linux-gnu/13/../../../../include/c++/13/bits/regex_automaton.tcc \
+  /usr/bin/../lib/gcc/x86_64-linux-gnu/13/../../../../include/c++/13/bits/regex_scanner.h \
+  /usr/bin/../lib/gcc/x86_64-linux-gnu/13/../../../../include/c++/13/bits/regex_scanner.tcc \
+  /usr/bin/../lib/gcc/x86_64-linux-gnu/13/../../../../include/c++/13/bits/regex_compiler.h \
+  /usr/bin/../lib/gcc/x86_64-linux-gnu/13/../../../../include/c++/13/bits/regex_compiler.tcc \
+  /usr/bin/../lib/gcc/x86_64-linux-gnu/13/../../../../include/c++/13/bits/regex.h \
+  /usr/bin/../lib/gcc/x86_64-linux-gnu/13/../../../../include/c++/13/bits/regex.tcc \
+  /usr/bin/../lib/gcc/x86_64-linux-gnu/13/../../../../include/c++/13/bits/regex_executor.h \
+  /usr/bin/../lib/gcc/x86_64-linux-gnu/13/../../../../include/c++/13/bits/regex_executor.tcc \
+  /usr/bin/../lib/gcc/x86_64-linux-gnu/13/../../../../include/c++/13/cmath \
+  /usr/include/math.h /usr/include/x86_64-linux-gnu/bits/math-vector.h \
+  /usr/include/x86_64-linux-gnu/bits/libm-simd-decl-stubs.h \
+  /usr/include/x86_64-linux-gnu/bits/flt-eval-method.h \
+  /usr/include/x86_64-linux-gnu/bits/fp-logb.h \
+  /usr/include/x86_64-linux-gnu/bits/fp-fast.h \
+  /usr/include/x86_64-linux-gnu/bits/mathcalls-helper-functions.h \
+  /usr/include/x86_64-linux-gnu/bits/mathcalls.h \
+  /usr/include/x86_64-linux-gnu/bits/mathcalls-narrow.h \
+  /usr/include/x86_64-linux-gnu/bits/iscanonical.h \
+  /usr/bin/../lib/gcc/x86_64-linux-gnu/13/../../../../include/c++/13/bits/specfun.h \
+  /usr/bin/../lib/gcc/x86_64-linux-gnu/13/../../../../include/c++/13/tr1/gamma.tcc \
+  /usr/bin/../lib/gcc/x86_64-linux-gnu/13/../../../../include/c++/13/tr1/special_function_util.h \
+  /usr/bin/../lib/gcc/x86_64-linux-gnu/13/../../../../include/c++/13/tr1/bessel_function.tcc \
+  /usr/bin/../lib/gcc/x86_64-linux-gnu/13/../../../../include/c++/13/tr1/beta_function.tcc \
+  /usr/bin/../lib/gcc/x86_64-linux-gnu/13/../../../../include/c++/13/tr1/ell_integral.tcc \
+  /usr/bin/../lib/gcc/x86_64-linux-gnu/13/../../../../include/c++/13/tr1/exp_integral.tcc \
+  /usr/bin/../lib/gcc/x86_64-linux-gnu/13/../../../../include/c++/13/tr1/hypergeometric.tcc \
+  /usr/bin/../lib/gcc/x86_64-linux-gnu/13/../../../../include/c++/13/tr1/legendre_function.tcc \
+  /usr/bin/../lib/gcc/x86_64-linux-gnu/13/../../../../include/c++/13/tr1/modified_bessel_func.tcc \
+  /usr/bin/../lib/gcc/x86_64-linux-gnu/13/../../../../include/c++/13/tr1/poly_hermite.tcc \
+  /usr/bin/../lib/gcc/x86_64-linux-gnu/13/../../../../include/c++/13/tr1/poly_laguerre.tcc \
+  /usr/bin/../lib/gcc/x86_64-linux-gnu/13/../../../../include/c++/13/tr1/riemann_zeta.tcc \
+  /usr/bin/../lib/gcc/x86_64-linux-gnu/13/../../../../include/c++/13/map \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/13/../../../../include/c++/13/bits/stl_multimap.h \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/13/../../../../include/c++/13/bits/erase_if.h \
   /home/tim/c/ivsing/include/json.hpp \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/13/../../../../include/c++/13/functional \
-  /usr/bin/../lib/gcc/x86_64-linux-gnu/13/../../../../include/c++/13/bits/std_function.h \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/13/../../../../include/c++/13/unordered_map \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/13/../../../../include/c++/13/bits/unordered_map.h \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/13/../../../../include/c++/13/bits/hashtable.h \
@@ -373,29 +416,6 @@ CMakeFiles/ivslib.dir/src/ivs.cpp.o: /home/tim/c/ivsing/src/ivs.cpp \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/13/../../../../include/c++/13/bits/forward_list.h \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/13/../../../../include/c++/13/bits/forward_list.tcc \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/13/../../../../include/c++/13/valarray \
-  /usr/bin/../lib/gcc/x86_64-linux-gnu/13/../../../../include/c++/13/cmath \
-  /usr/include/math.h /usr/include/x86_64-linux-gnu/bits/math-vector.h \
-  /usr/include/x86_64-linux-gnu/bits/libm-simd-decl-stubs.h \
-  /usr/include/x86_64-linux-gnu/bits/flt-eval-method.h \
-  /usr/include/x86_64-linux-gnu/bits/fp-logb.h \
-  /usr/include/x86_64-linux-gnu/bits/fp-fast.h \
-  /usr/include/x86_64-linux-gnu/bits/mathcalls-helper-functions.h \
-  /usr/include/x86_64-linux-gnu/bits/mathcalls.h \
-  /usr/include/x86_64-linux-gnu/bits/mathcalls-narrow.h \
-  /usr/include/x86_64-linux-gnu/bits/iscanonical.h \
-  /usr/bin/../lib/gcc/x86_64-linux-gnu/13/../../../../include/c++/13/bits/specfun.h \
-  /usr/bin/../lib/gcc/x86_64-linux-gnu/13/../../../../include/c++/13/tr1/gamma.tcc \
-  /usr/bin/../lib/gcc/x86_64-linux-gnu/13/../../../../include/c++/13/tr1/special_function_util.h \
-  /usr/bin/../lib/gcc/x86_64-linux-gnu/13/../../../../include/c++/13/tr1/bessel_function.tcc \
-  /usr/bin/../lib/gcc/x86_64-linux-gnu/13/../../../../include/c++/13/tr1/beta_function.tcc \
-  /usr/bin/../lib/gcc/x86_64-linux-gnu/13/../../../../include/c++/13/tr1/ell_integral.tcc \
-  /usr/bin/../lib/gcc/x86_64-linux-gnu/13/../../../../include/c++/13/tr1/exp_integral.tcc \
-  /usr/bin/../lib/gcc/x86_64-linux-gnu/13/../../../../include/c++/13/tr1/hypergeometric.tcc \
-  /usr/bin/../lib/gcc/x86_64-linux-gnu/13/../../../../include/c++/13/tr1/legendre_function.tcc \
-  /usr/bin/../lib/gcc/x86_64-linux-gnu/13/../../../../include/c++/13/tr1/modified_bessel_func.tcc \
-  /usr/bin/../lib/gcc/x86_64-linux-gnu/13/../../../../include/c++/13/tr1/poly_hermite.tcc \
-  /usr/bin/../lib/gcc/x86_64-linux-gnu/13/../../../../include/c++/13/tr1/poly_laguerre.tcc \
-  /usr/bin/../lib/gcc/x86_64-linux-gnu/13/../../../../include/c++/13/tr1/riemann_zeta.tcc \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/13/../../../../include/c++/13/bits/valarray_array.h \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/13/../../../../include/c++/13/bits/valarray_array.tcc \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/13/../../../../include/c++/13/bits/valarray_before.h \
@@ -409,7 +429,6 @@ CMakeFiles/ivslib.dir/src/ivs.cpp.o: /home/tim/c/ivsing/src/ivs.cpp \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/13/../../../../include/c++/13/cassert \
   /usr/include/assert.h \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/13/../../../../include/c++/13/ranges \
-  /usr/bin/../lib/gcc/x86_64-linux-gnu/13/../../../../include/c++/13/optional \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/13/../../../../include/c++/13/span \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/13/../../../../include/c++/13/numeric \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/13/../../../../include/c++/13/bits/stl_numeric.h \

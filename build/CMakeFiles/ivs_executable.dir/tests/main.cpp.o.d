@@ -350,15 +350,35 @@ CMakeFiles/ivs_executable.dir/tests/main.cpp.o: \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/13/../../../../include/c++/13/bits/ranges_algobase.h \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/13/../../../../include/c++/13/pstl/glue_algorithm_defs.h \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/13/../../../../include/c++/13/pstl/execution_defs.h \
-  /usr/bin/../lib/gcc/x86_64-linux-gnu/13/../../../../include/c++/13/map \
+  /usr/bin/../lib/gcc/x86_64-linux-gnu/13/../../../../include/c++/13/optional \
+  /usr/bin/../lib/gcc/x86_64-linux-gnu/13/../../../../include/c++/13/regex \
+  /usr/bin/../lib/gcc/x86_64-linux-gnu/13/../../../../include/c++/13/bitset \
+  /usr/bin/../lib/gcc/x86_64-linux-gnu/13/../../../../include/c++/13/stack \
+  /usr/bin/../lib/gcc/x86_64-linux-gnu/13/../../../../include/c++/13/deque \
+  /usr/bin/../lib/gcc/x86_64-linux-gnu/13/../../../../include/c++/13/bits/stl_deque.h \
+  /usr/bin/../lib/gcc/x86_64-linux-gnu/13/../../../../include/c++/13/bits/deque.tcc \
+  /usr/bin/../lib/gcc/x86_64-linux-gnu/13/../../../../include/c++/13/bits/stl_stack.h \
+  /usr/bin/../lib/gcc/x86_64-linux-gnu/13/../../../../include/c++/13/bits/std_function.h \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/13/../../../../include/c++/13/bits/stl_tree.h \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/13/../../../../include/c++/13/bits/node_handle.h \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/13/../../../../include/c++/13/bits/stl_map.h \
+  /usr/bin/../lib/gcc/x86_64-linux-gnu/13/../../../../include/c++/13/bits/regex_constants.h \
+  /usr/bin/../lib/gcc/x86_64-linux-gnu/13/../../../../include/c++/13/bits/regex_error.h \
+  /usr/bin/../lib/gcc/x86_64-linux-gnu/13/../../../../include/c++/13/bits/regex_automaton.h \
+  /usr/bin/../lib/gcc/x86_64-linux-gnu/13/../../../../include/c++/13/bits/regex_automaton.tcc \
+  /usr/bin/../lib/gcc/x86_64-linux-gnu/13/../../../../include/c++/13/bits/regex_scanner.h \
+  /usr/bin/../lib/gcc/x86_64-linux-gnu/13/../../../../include/c++/13/bits/regex_scanner.tcc \
+  /usr/bin/../lib/gcc/x86_64-linux-gnu/13/../../../../include/c++/13/bits/regex_compiler.h \
+  /usr/bin/../lib/gcc/x86_64-linux-gnu/13/../../../../include/c++/13/bits/regex_compiler.tcc \
+  /usr/bin/../lib/gcc/x86_64-linux-gnu/13/../../../../include/c++/13/bits/regex.h \
+  /usr/bin/../lib/gcc/x86_64-linux-gnu/13/../../../../include/c++/13/bits/regex.tcc \
+  /usr/bin/../lib/gcc/x86_64-linux-gnu/13/../../../../include/c++/13/bits/regex_executor.h \
+  /usr/bin/../lib/gcc/x86_64-linux-gnu/13/../../../../include/c++/13/bits/regex_executor.tcc \
+  /usr/bin/../lib/gcc/x86_64-linux-gnu/13/../../../../include/c++/13/map \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/13/../../../../include/c++/13/bits/stl_multimap.h \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/13/../../../../include/c++/13/bits/erase_if.h \
   /home/tim/c/ivsing/include/json.hpp \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/13/../../../../include/c++/13/functional \
-  /usr/bin/../lib/gcc/x86_64-linux-gnu/13/../../../../include/c++/13/bits/std_function.h \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/13/../../../../include/c++/13/unordered_map \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/13/../../../../include/c++/13/bits/unordered_map.h \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/13/../../../../include/c++/13/bits/hashtable.h \
@@ -410,7 +430,6 @@ CMakeFiles/ivs_executable.dir/tests/main.cpp.o: \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/13/../../../../include/c++/13/cstring \
   /usr/include/string.h /usr/include/strings.h \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/13/../../../../include/c++/13/ranges \
-  /usr/bin/../lib/gcc/x86_64-linux-gnu/13/../../../../include/c++/13/optional \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/13/../../../../include/c++/13/span \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/13/../../../../include/c++/13/numeric \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/13/../../../../include/c++/13/bits/stl_numeric.h \

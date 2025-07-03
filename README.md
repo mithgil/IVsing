@@ -1,7 +1,10 @@
 # IVpy: A Python interface to IVsing of c++ processing
 
-A further step from [IVsing](https://github.com/mithgil/IVsing) project:
-A c++ projet that converts a myriad of dat/txt files in Bias-Sepctroscopy experiments into a structured h5.
+After performing I-V curves mapping using Bias-Spectroscopy module in Nanonis (scanning probe microscopy controller, SPECS GmbH), users would get a great number of data files in format of txt.
+
+This is a natural progression from former c++ project IVsing that converts a myriad of dat/txt files in Bias-Sepctroscopy experiments data into a structured h5.
+
+By providing a Python interface to process Bias-Spectroscopy map data files, user can platform-independent and easily convert irregular, messy data into a structured one.
 
 --
 
@@ -62,52 +65,37 @@ cd .../IVsing/build
 ivs_executable /home/yourname/path/to/data
 
 ```
-
-And it will output
+And it will process all the .dat files under the subdirectories without any user inputs and output:
 
 ```bash
 
-Directory to search for .dat
 Subdirectories in "/home/yourname/path/to/data":
 --------------------------------------------------
- Processing subdirectory: map1_500nm
-  - Number of dat files is 4900
-Saved Date found: 05.06.2025
-[DATA] section found.
-   Header: 
-  ias calc (V)   Current (A)
-  * 'Bias' appears exactly once at column index: 0
-  - Bias-Spectroscopy Current-forward only
-  pixels on bias sweep: 453
-... all dat files are parsed.
-Enter scan pixels (format: xpixels ypixels): 70 70
-Enter scan range (format: xrange yrange): 500 
-500
-Enter unit (um or nm): nm
-Choose format to output:
-1. JSON
-2. HDF5
-3. Both
-   ----   
-3
+  Processing subdirectory: map2_120by80_600nm_400nm
+  - Warning: It looks like your map is not a square. Process breaks
+--------------------------------------------------
+  Processing subdirectory: map1_300nm
+	- Scan pixels: (100, 100)
+	- Full Scan range (m): (3e-07, 3e-07)
+	- Pixel size (m):3e-09
+	- Bias-Spectroscopy: Current-forward only
   -------  
-Writing JSON to: /home/yourname/path/to/data/map1_500nm/ivmapsing.json
-JSON file successfully written to: "/home/yourname/path/to/data/map1_500nm/ivmapsing.json"
+   JSON file successfully written to: "/home/yourname/path/to/data/map1_300nm/ivmapsing.json"
   -------  
-Writing HDF5 to: /home/yourname/path/to/data/map1_500nm/ivmapsing.h5
-HDF5 file structured as:
-  /ExpDate
-  /scanrange/
-  ├──unit
-  ├──x
-  └──y
-  /scanpixels/
-  ├──x
-  └──y
-  /datasets/
-  ├──z (optional)
-  ├──bias
-  └──current_fwd
+   HDF5 file successfully written to: "/home/yourname/path/to/data/map1_300nm/ivmapsing.h5"
+    HDF5 file structured as:
+      /ExpDate
+      /scanrange/
+      ├──unit
+      ├──x
+      └──y
+      /scanpixels/
+      ├──x
+      └──y
+      /datasets/
+      ├──z (optional)
+      ├──bias
+      └──current_fwd
 
 ```
 This will nevigates to each subdirectory of your given root directory.

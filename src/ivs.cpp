@@ -6,6 +6,8 @@
 
 namespace fs = std::filesystem;
 
+datParser::datParser() {}
+
 void datParser::parse_experiments(const std::string& input_directory){
     // Collect all .dat files in the input directory
     
@@ -19,12 +21,17 @@ void datParser::parse_experiments(const std::string& input_directory){
         }
     }
 
-    // Sort the filenames
+    // sort the filenames
     std::sort(dat_files.begin(), dat_files.end());
+
+    writePixels(file_count);
 
     //open the file and parse metadata first
     parse_metadata(input_directory + "/" + dat_files[0]); //line of header, header (vector), dataSize (pixels on bias sweep)
-    // correct repeated column (which causes false column size)
+
+    extractFullScanRange(input_directory, dat_files);
+
+    // correct repeated column (which causes false column size) 
     correctDoubleBias();
 
     // check data content
@@ -32,7 +39,7 @@ void datParser::parse_experiments(const std::string& input_directory){
     size_t zspecfound = dat_files[0].find("Z-Spectroscopy");
 
     if (biasfound != std::string::npos){
-        std::cout<<"  - "<<"Bias-Spectroscopy ";
+        std::cout<<"\t- "<<"Bias-Spectroscopy: ";
         size_t OCfound = header[1].find("OC");// e.g. the header OC D1 Phase (deg) 
 
         if(OCfound != std::string::npos){ // "OC" found: Bias-displacement-current
@@ -60,7 +67,6 @@ void datParser::parse_experiments(const std::string& input_directory){
         
     } else if(zspecfound != std::string::npos){
         std::cout<<"  - "<<"Z-Spectroscopy Map";
-        //Z rel (m)	Current (A)	Input 4 (V)	Current [bwd] (A)	Input 4 [bwd] (V)
         
         auto curit = std::find_if(header.begin(), header.end(), [](const std::string& str) {
             return str.find("Current") != std::string::npos;
@@ -82,14 +88,12 @@ void datParser::parse_experiments(const std::string& input_directory){
 
     }else{
         std::cout<<"Unknown experiments";
-        return; //exit
+        return; 
     }
 
     bool is_expdata_initialized = false;  
 
     int num_rows = std::get<int>(metadata["dataSize"]);
-
-    std::cout<<"  pixels on bias sweep: "<<num_rows<<std::endl;
 
     // Initialize ivdata based on the size of the first file's data
     if (!is_expdata_initialized) {
@@ -124,7 +128,6 @@ void datParser::parse_experiments(const std::string& input_directory){
             experiments_data.amp_fwd.resize(num_rows, std::vector<double>(dat_files.size(), 0.0)); 
             experiments_data.phase_fwd.resize(num_rows, std::vector<double>(dat_files.size(), 0.0)); 
         }
-
         is_expdata_initialized = true;
     }
         
@@ -199,7 +202,6 @@ void datParser::parse_experiments(const std::string& input_directory){
             infile.close();
         }
     }
-    std::cout << "... all dat files are parsed." << std::endl;   
 }
 
 // utility function to trim leading and trailing whitespace from a string
@@ -229,10 +231,9 @@ void datParser::correctDoubleBias() {
     if (biasCount == 0) {
         std::cerr << "Warning: No 'Bias' column found in the header." << std::endl;
         return;
-    } else if (biasCount == 1) {
-        std::cout << "  * 'Bias' appears exactly once at column index: " << biasIndices[0] << std::endl;
-    } else {
-        std::cout << "  * 'Bias' appears " << biasCount << " times at column indices: ";
+
+    } else if (biasCount > 1){
+        std::cout << "  Alert: 'Bias' appears " << biasCount << " times at column indices: ";
         for (const auto& idx : biasIndices) {
             std::cout << idx << " ";
         }
@@ -244,37 +245,12 @@ void datParser::correctDoubleBias() {
         if (zeroExists && !oneExists) {
             if (header.size() >= 2) {
                 header.resize(2);
-                std::cout << "    Header column corrected, resized to 2." << std::endl;
+                std::cout << "    Alert: Header column corrected, resized to 2." << std::endl;
             } else {
                 std::cerr << "    Error: Cannot resize header, insufficient size." << std::endl;
             }
         }
     }
-}
-
-void datParser::printFirstDat(const std::string& filePath){
-    std::ifstream file(filePath);
-
-    if (!file.is_open()) {
-        std::cerr << "Error: Unable to open file " << filePath << std::endl;
-        return;
-    }
-    int line_num = 0;
-    std::string line;
-
-    // Read through the file line by line
-    while (std::getline(file, line)) {
-        std::cout << line << std::endl;  // Print the line
-        line_num++;
-
-        // Stop after printing 20 lines
-        if (line_num == 20) {
-            break;
-        }
-    }
-
-    // Close the file
-    file.close();
 }
 
 /* parse and store metadata
@@ -317,8 +293,6 @@ void datParser::parse_metadata(const std::string& filePath) {
                 if (spacePos != std::string::npos) {
                     savedDate = savedDate.substr(0, spacePos); // Keep only the date
                 }
-
-                std::cout << "Saved Date found: " << savedDate << std::endl;
             }
             
             metadata["ExpDate"] = savedDate;
@@ -327,13 +301,11 @@ void datParser::parse_metadata(const std::string& filePath) {
         if (line.find("[DATA]") != std::string::npos) {
             // Found the [DATA] section
             dataSectionFound = true;
-            std::cout << "[DATA] section found." << std::endl;
 
             // Capture the next line as the header
             if (std::getline(file, line)) {
                 line_header = line_num + 1;  // Set header line
 
-                //line = trim(line);  
                 std::istringstream headerStream(line);
                 std::string column;
 
@@ -341,12 +313,7 @@ void datParser::parse_metadata(const std::string& filePath) {
                 while (std::getline(headerStream, column, '\t')) {
                     header.push_back(column);
                 }
-
-                std::cout << "   Header: "<<std::endl;
-                for (const auto& col : header) {
-                    std::cout << " "<< col << "  ";
-                }
-                std::cout << std::endl;
+                
             } else {
                 std::cerr << "Error: No header line found after [DATA] in file " << filePath << std::endl;
                 break;
@@ -366,50 +333,11 @@ void datParser::parse_metadata(const std::string& filePath) {
     file.close();
 }
 
-void datParser::printColumnData() {
-    std::cout<<"Print column data"<<std::endl;
-   
-    // Dynamically generate headers if not available
-    if (header.empty()) {
-        for (size_t i = 0; i < ColumnData.size(); ++i) {
-            header.push_back("Column" + std::to_string(i + 1)); // e.g., "Column1", "Column2", ...
-        }
-    }
-
-    // Print the headers
-    for (size_t col = 0; col < header.size(); ++col) {
-        std::cout << header[col];
-        if (col < header.size() - 1) {
-            std::cout << " , "; // Separator
-        }
-    }
-    std::cout << std::endl;
-
-    // Find the maximum number of rows in all columns
-    size_t maxRows = 0;
-    for (const auto& col : ColumnData) {
-        maxRows = std::max(maxRows, col.size());
-    }
-
-    // Print the data in rows
-    for (size_t row = 0; row < maxRows; ++row) {
-        for (size_t col = 0; col < ColumnData.size(); ++col) {
-            if (row < ColumnData[col].size()) {
-                std::cout << ColumnData[col][row];
-            } else {
-                std::cout << " "; // Empty cell for missing data
-            }
-            if (col < ColumnData.size() - 1) {
-                std::cout << " , "; // Separator
-            }
-        }
-        std::cout << std::endl; // End of the row
-    }
-}
-
-/* utility to read tsv data dynamically
+/**
+   utility to read tsv data dynamically
    returns columns of data
 */
+
 void datParser::parse_tsv(std::ifstream& fp) {
     std::string line;
     std::vector<std::vector<double>> columns; // Will hold all columns
@@ -447,76 +375,152 @@ void datParser::parse_tsv(std::ifstream& fp) {
     ColumnData = columns; //private member
 }
 
-void datParser::output(const std::string& input_directory) {
+void datParser::writePixels(int& FileCounts){
 
-    double xrange, yrange;
-    int xpixels, ypixels;
-    std::string unit;
-    int option;
+    double sqrt_file_count = std::sqrt(static_cast<double>(FileCounts));
+    
+    int xpixels = static_cast<int>(std::round(sqrt_file_count));
+    int ypixels = static_cast<int>(std::round(sqrt_file_count));
 
-    // 輸入 scan pixels (xpixels, ypixels)
-    std::cout << "Enter scan pixels (format: xpixels ypixels): ";
-    std::cin >> xpixels >> ypixels;
-    if (std::cin.fail()) {
-        std::cerr << "Invalid input for scan pixels!" << std::endl;
-        std::cin.clear();
-        std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
-        return;
+    scanRangeData.scanPixels = std::make_tuple(xpixels, ypixels); 
+
+}
+
+
+std::optional<std::pair<double, double>> datParser::extractXYCoordinates(const std::string& filepath) {
+    std::ifstream file(filepath);
+    if (!file.is_open()) {
+        // std::cerr << "Error: Could not open file '" << filepath << "'." << std::endl;
+        return std::nullopt;
     }
 
-    // 輸入 scan range (xrange, yrange)
-    std::cout << "Enter scan range (format: xrange yrange): ";
-    std::cin >> xrange >> yrange;
-    if (std::cin.fail()) {
-        std::cerr << "Invalid input for scan range!" << std::endl;
-        std::cin.clear();
-        std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
-        return;
+    std::regex x_regex(R"(X \(m\)\s*([-+]?\d+\.?\d*(?:[EeMmPp][-+]?\d*)?))");
+    std::regex y_regex(R"(Y \(m\)\s*([-+]?\d+\.?\d*(?:[EeMmPp][-+]?\d*)?))");
+
+    std::string line;
+    std::smatch match;
+
+    std::optional<double> x_coord;
+    std::optional<double> y_coord;
+
+    int line_count = 0;
+    const int MAX_HEADER_LINES = 20;
+
+    while (std::getline(file, line) && line_count < MAX_HEADER_LINES) {
+        if (!x_coord.has_value() && std::regex_search(line, match, x_regex)) {
+            if (match.size() > 1) {
+                try { x_coord = std::stod(match[1].str()); }
+                catch (const std::exception& e) { std::cerr << "Warning: Bad X value in " << filepath << std::endl; }
+            }
+        }
+        if (!y_coord.has_value() && std::regex_search(line, match, y_regex)) {
+            if (match.size() > 1) {
+                try { y_coord = std::stod(match[1].str()); }
+                catch (const std::exception& e) { std::cerr << "Warning: Bad Y value in " << filepath << std::endl; }
+            }
+        }
+        if (x_coord.has_value() && y_coord.has_value()) {
+            break;
+        }
+        line_count++;
     }
+    file.close();
 
-    // 輸入單位
-    std::cout << "Enter unit (um or nm): ";
-    std::cin >> unit;
-    if (unit != "um" && unit != "nm") {
-        std::cerr << "Invalid unit! Please enter 'um' or 'nm'." << std::endl;
-        return;
-    }
-
-    // 組裝 ScanRangeData
-    ScanRangeData scanParams;
-    scanParams.scanRange = std::make_tuple(xrange, yrange);  
-    scanParams.scanPixels = std::make_tuple(xpixels, ypixels); 
-    strncpy(scanParams.unit, unit.c_str(), sizeof(scanParams.unit) - 1);
-    scanParams.unit[sizeof(scanParams.unit) - 1] = '\0';
-
-    // 選擇輸出格式
-    std::cout << "Choose format to output:\n"
-              << "1. JSON\n"
-              << "2. HDF5\n"
-              << "3. Both\n"
-              << "   ----   \n";
-    std::cin >> option;
-
-    switch (option) {
-        case 1:
-            writingJSON(input_directory, scanParams);
-            break;
-        case 2:
-            writingH5(input_directory, scanParams);
-            break;
-        case 3:
-            std::cout << "  -------  " << std::endl;
-            writingJSON(input_directory, scanParams);
-            std::cout << "  -------  " << std::endl;
-            writingH5(input_directory, scanParams);
-            break;
-        default:
-            std::cerr << "Invalid option! Please enter 1, 2, or 3." << std::endl;
-            break;
+    if (x_coord.has_value() && y_coord.has_value()) {
+        return std::make_pair(x_coord.value(), y_coord.value());
+    } else {
+        // std::cerr << "Warning: Could not find both X and Y in '" << filepath << "'." << std::endl;
+        return std::nullopt;
     }
 }
 
-void datParser::writingJSON(const std::string& input_directory, datParser::ScanRangeData& scanParams) {
+void datParser::extractFullScanRange(
+    const std::string& input_directory,
+    const std::vector<std::string>& sorted_dat_filenames)
+{
+    if (sorted_dat_filenames.empty()) {
+        std::cout << "No .dat files found to extract boundary coordinates." << std::endl;
+        return;
+    }
+
+    double firstX = 0.0;
+    double secondX = 0.0;
+    double pixelSize = 0.0;
+    double firstY = 0.0;
+    double lastX = 0.0;
+    double lastY = 0.0;
+
+    double xRange = 0.0;
+    double yRange = 0.0;
+
+    std::cout<<"\t- Scan pixels: ("<<std::get<0>(scanRangeData.scanPixels)<< ", "
+                                <<std::get<1>(scanRangeData.scanPixels)<< ")"<< std::endl;
+
+    // Extract from the first file
+    std::string first_filepath = fs::path(input_directory) / sorted_dat_filenames.front();
+    std::string second_filepath = fs::path(input_directory) / sorted_dat_filenames[1];
+    // std::string secondrow_filepath = fs::path(input_directory) / sorted_dat_filenames[std::get<0>(scanRangeData.scanPixels)];
+
+    auto first_coords_opt = extractXYCoordinates(first_filepath);
+    if (first_coords_opt.has_value()) {
+
+        firstX = first_coords_opt->first; // Assigning the first value of the pair
+        firstY = first_coords_opt->second; // Assigning the second value of the pair
+
+    } else {
+        std::cerr << "Warning: Could not extract X/Y from first file: " << sorted_dat_filenames.front() << std::endl;
+    }
+
+    auto second_coords_opt = extractXYCoordinates(second_filepath);
+    if (second_coords_opt.has_value()) {
+
+        secondX = second_coords_opt->first; // Assigning the first value of the pair
+
+    } else {
+        std::cerr << "Warning: Could not extract X/Y from first file: " << sorted_dat_filenames[1] << std::endl;
+    }
+
+    pixelSize = secondX - firstX; // assuming square pixel
+
+    // Extract from the last file 
+    if (sorted_dat_filenames.size() > 1) {
+        std::string last_filepath = fs::path(input_directory) / sorted_dat_filenames.back();
+        auto last_coords_opt = extractXYCoordinates(last_filepath);
+        if (last_coords_opt.has_value()) {
+            lastX = last_coords_opt->first;
+            lastY = last_coords_opt->second;
+
+        } else {
+            std::cerr << "Warning: Could not extract X/Y from last file: " << sorted_dat_filenames.back() << std::endl;
+        }
+    } else {
+        lastX = firstX;
+        lastY = firstY;
+    }
+
+    xRange = lastX - firstX + pixelSize;
+    yRange = lastY - firstY + pixelSize;
+
+    std::cout<< "\t- Full Scan range (m): (" << xRange <<", "<< yRange << ")"<<std::endl;
+    std::cout<<"\t- Pixel size (m):"<<pixelSize<<std::endl;
+
+    scanRangeData.scanRange = std::make_tuple(xRange, yRange);  
+
+    strncpy(scanRangeData.unit, "m", sizeof(scanRangeData.unit) - 1);
+    scanRangeData.unit[sizeof(scanRangeData.unit) - 1] = '\0'; // Ensure null-termination
+
+}
+
+void datParser::output(const std::string& input_directory) {
+
+    std::cout << "  -------  " << std::endl;
+    writingJSON(input_directory);
+    std::cout << "  -------  " << std::endl;
+    writingH5(input_directory);
+
+}
+
+void datParser::writingJSON(const std::string& input_directory) {
     // 檢查輸入目錄是否存在
     if (!fs::exists(input_directory)) {
         std::cerr << "Error: Input directory does not exist: " << input_directory << std::endl;
@@ -540,12 +544,12 @@ void datParser::writingJSON(const std::string& input_directory, datParser::ScanR
     }
 
     // 處理 scanrange 和 scanpixels（拆解 tuple）
-    auto [xrange, yrange] = scanParams.scanRange;
-    auto [xpixels, ypixels] = scanParams.scanPixels;
+    auto [xrange, yrange] = scanRangeData.scanRange;
+    auto [xpixels, ypixels] = scanRangeData.scanPixels;
 
     j["scanrange"]["x"] = xrange;
     j["scanrange"]["y"] = yrange;
-    j["scanrange"]["unit"] = scanParams.unit;
+    j["scanrange"]["unit"] = scanRangeData.unit;
 
     j["scanpixels"]["x"] = xpixels;
     j["scanpixels"]["y"] = ypixels;
@@ -559,7 +563,6 @@ void datParser::writingJSON(const std::string& input_directory, datParser::ScanR
 
     // 寫入檔案
     fs::path output_file = fs::path(input_directory) / "ivmapsing.json";
-    std::cout << "Writing JSON to: " << output_file.string() << std::endl;
 
     std::ofstream out(output_file);
     if (!out.is_open()) {
@@ -567,7 +570,7 @@ void datParser::writingJSON(const std::string& input_directory, datParser::ScanR
         return;
     }
 
-    out << j.dump(4); // 4 空格縮進
+    out << j.dump(4); 
     if (out.fail()) {
         std::cerr << "Failed to write JSON to file: " << output_file << std::endl;
         out.close();
@@ -575,13 +578,12 @@ void datParser::writingJSON(const std::string& input_directory, datParser::ScanR
     }
 
     out.close();
-    std::cout << "JSON file successfully written to: " << output_file << std::endl;
+    std::cout << "   JSON file successfully written to: " << output_file << std::endl;
 }
 
-void datParser::writingH5(const std::string& input_directory, datParser::ScanRangeData& scanParams) {
+void datParser::writingH5(const std::string& input_directory) {
     fs::path dir_path(input_directory);
     fs::path filename = dir_path / "ivmapsing.h5";
-    std::cout << "Writing HDF5 to: " << filename.string() << std::endl;
 
     // Open HDF5 file
     H5::H5File file(filename.string(), H5F_ACC_TRUNC);
@@ -589,7 +591,7 @@ void datParser::writingH5(const std::string& input_directory, datParser::ScanRan
     // ================== 元數據部分 ==================
     // 1. 寫入 ExpDate 屬性 (根目錄)
     if (metadata.count("ExpDate")) { // Check if key exists
-        const auto& expDateVariant = metadata.at("ExpDate"); // Get the variant
+        const auto& expDateVariant = metadata.at("ExpDate"); 
         if (std::holds_alternative<std::string>(expDateVariant)) { // Check if it holds a string
             std::string expDate = std::get<std::string>(expDateVariant); // Get the string value
             H5::StrType str_type(H5::PredType::C_S1, expDate.size() + 1); // +1 for null terminator
@@ -603,7 +605,7 @@ void datParser::writingH5(const std::string& input_directory, datParser::ScanRan
     }
 
     // 2. 寫入 scanrange 組
-    auto [xrange, yrange] = scanParams.scanRange;
+    auto [xrange, yrange] = scanRangeData.scanRange;
     {
         H5::Group scanrange_group = file.createGroup("/scanrange");
         
@@ -617,11 +619,11 @@ void datParser::writingH5(const std::string& input_directory, datParser::ScanRan
         // 寫入 unit 屬性
         H5::StrType str_type(H5::PredType::C_S1, 10);
         H5::Attribute unit_attr = scanrange_group.createAttribute("unit", str_type, H5::DataSpace(H5S_SCALAR));
-        unit_attr.write(str_type, scanParams.unit);
+        unit_attr.write(str_type, scanRangeData.unit);
     }
 
     // 3. 寫入 scanpixels 組
-    auto [xpixels, ypixels] = scanParams.scanPixels;
+    auto [xpixels, ypixels] = scanRangeData.scanPixels;
     {
         H5::Group scanpixels_group = file.createGroup("/scanpixels");
         
@@ -672,19 +674,21 @@ void datParser::writingH5(const std::string& input_directory, datParser::ScanRan
     write2DData("phase_bwd", experiments_data.phase_bwd);
 
     file.close();
-    std::cout << "HDF5 file structured as:\n"
-                << "  /ExpDate\n"
-                << "  /scanrange/\n"
-                << "  ├──unit\n"
-                << "  ├──x\n"
-                << "  └──y\n"
-                << "  /scanpixels/\n"
-                << "  ├──x\n"
-                << "  └──y\n"
-                << "  /datasets/\n"
-                << "  ├──z (optional)\n"
-                << "  ├──bias\n"
-                << "  └──current_fwd\n" <<std::endl;
+    std::cout << "   HDF5 file successfully written to: " << filename << std::endl;
+
+    std::cout << "    HDF5 file structured as:\n"
+                << "      /ExpDate\n"
+                << "      /scanrange/\n"
+                << "      ├──unit\n"
+                << "      ├──x\n"
+                << "      └──y\n"
+                << "      /scanpixels/\n"
+                << "      ├──x\n"
+                << "      └──y\n"
+                << "      /datasets/\n"
+                << "      ├──z (optional)\n"
+                << "      ├──bias\n"
+                << "      └──current_fwd\n" <<std::endl;
 
 }
 

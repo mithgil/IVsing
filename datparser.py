@@ -127,26 +127,26 @@ def printHelp():
 
 def process_directories(path_str):
     return _datparser.process_directories(path_str)
-class expdata(object):
+class Expdata(object):
     thisown = property(lambda x: x.this.own(), lambda x, v: x.this.own(v), doc="The membership flag")
     __repr__ = _swig_repr
-    z = property(_datparser.expdata_z_get, _datparser.expdata_z_set)
-    bias = property(_datparser.expdata_bias_get, _datparser.expdata_bias_set)
-    current_fwd = property(_datparser.expdata_current_fwd_get, _datparser.expdata_current_fwd_set)
-    current_bwd = property(_datparser.expdata_current_bwd_get, _datparser.expdata_current_bwd_set)
-    tb_fwd = property(_datparser.expdata_tb_fwd_get, _datparser.expdata_tb_fwd_set)
-    tb_bwd = property(_datparser.expdata_tb_bwd_get, _datparser.expdata_tb_bwd_set)
-    amp_fwd = property(_datparser.expdata_amp_fwd_get, _datparser.expdata_amp_fwd_set)
-    amp_bwd = property(_datparser.expdata_amp_bwd_get, _datparser.expdata_amp_bwd_set)
-    phase_fwd = property(_datparser.expdata_phase_fwd_get, _datparser.expdata_phase_fwd_set)
-    phase_bwd = property(_datparser.expdata_phase_bwd_get, _datparser.expdata_phase_bwd_set)
+    z = property(_datparser.Expdata_z_get, _datparser.Expdata_z_set)
+    bias = property(_datparser.Expdata_bias_get, _datparser.Expdata_bias_set)
+    current_fwd = property(_datparser.Expdata_current_fwd_get, _datparser.Expdata_current_fwd_set)
+    current_bwd = property(_datparser.Expdata_current_bwd_get, _datparser.Expdata_current_bwd_set)
+    tb_fwd = property(_datparser.Expdata_tb_fwd_get, _datparser.Expdata_tb_fwd_set)
+    tb_bwd = property(_datparser.Expdata_tb_bwd_get, _datparser.Expdata_tb_bwd_set)
+    amp_fwd = property(_datparser.Expdata_amp_fwd_get, _datparser.Expdata_amp_fwd_set)
+    amp_bwd = property(_datparser.Expdata_amp_bwd_get, _datparser.Expdata_amp_bwd_set)
+    phase_fwd = property(_datparser.Expdata_phase_fwd_get, _datparser.Expdata_phase_fwd_set)
+    phase_bwd = property(_datparser.Expdata_phase_bwd_get, _datparser.Expdata_phase_bwd_set)
 
     def __init__(self):
-        _datparser.expdata_swiginit(self, _datparser.new_expdata())
-    __swig_destroy__ = _datparser.delete_expdata
+        _datparser.Expdata_swiginit(self, _datparser.new_Expdata())
+    __swig_destroy__ = _datparser.delete_Expdata
 
-# Register expdata in _datparser:
-_datparser.expdata_swigregister(expdata)
+# Register Expdata in _datparser:
+_datparser.Expdata_swigregister(Expdata)
 class ScanRangeData(object):
     thisown = property(lambda x: x.this.own(), lambda x, v: x.this.own(v), doc="The membership flag")
     __repr__ = _swig_repr
@@ -167,12 +167,6 @@ class datParser(object):
     def __init__(self):
         _datparser.datParser_swiginit(self, _datparser.new_datParser())
 
-    def printColumnData(self):
-        return _datparser.datParser_printColumnData(self)
-
-    def printFirstDat(self, filePath):
-        return _datparser.datParser_printFirstDat(self, filePath)
-
     def parse_metadata(self, filePath):
         return _datparser.datParser_parse_metadata(self, filePath)
 
@@ -184,12 +178,6 @@ class datParser(object):
 
     def output(self, filename):
         return _datparser.datParser_output(self, filename)
-
-    def writingJSON(self, input_directory, scanParams):
-        return _datparser.datParser_writingJSON(self, input_directory, scanParams)
-
-    def writingH5(self, input_directory, scanParams):
-        return _datparser.datParser_writingH5(self, input_directory, scanParams)
     __swig_destroy__ = _datparser.delete_datParser
 
 # Register datParser in _datparser:
