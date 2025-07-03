@@ -37,7 +37,7 @@ It is convenient to open them by a text editor but not efficient for storing dat
 
 ## Table of Contents
 
-  - [Usage]
+  - [Usage](#Usage)
     - [Building the Project](#building-the-project)
       - [Prerequisites](#prerequisites)
         - [Linux](#linux) 
