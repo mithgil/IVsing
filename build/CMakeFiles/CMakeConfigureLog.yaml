@@ -637,3 +637,87 @@ events:
         
       exitCode: 2
 ...
+
+---
+events:
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake-3.28/Modules/FindHDF5.cmake:238 (try_compile)"
+      - "/usr/share/cmake-3.28/Modules/FindHDF5.cmake:608 (_HDF5_test_regular_compiler_C)"
+      - "CMakeLists.txt:19 (find_package)"
+    directories:
+      source: "/home/tim/c/ivsing/build/CMakeFiles/CMakeScratch/TryCompile-irIpl7"
+      binary: "/home/tim/c/ivsing/build/CMakeFiles/CMakeScratch/TryCompile-irIpl7"
+    cmakeVariables:
+      CMAKE_CXX_COMPILER_CLANG_SCAN_DEPS: "CMAKE_CXX_COMPILER_CLANG_SCAN_DEPS-NOTFOUND"
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+    buildResult:
+      variable: "HDF5_C_COMPILER_NO_INTERROGATE"
+      cached: true
+      stdout: |
+        Change Dir: '/home/tim/c/ivsing/build/CMakeFiles/CMakeScratch/TryCompile-irIpl7'
+        
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_7f59f/fast
+        /usr/bin/cmake: /home/tim/miniconda3/lib/libcurl.so.4: no version information available (required by /usr/bin/cmake)
+        gmake[1]: Entering directory '/home/tim/c/ivsing/build/CMakeFiles/CMakeScratch/TryCompile-irIpl7'
+        /usr/bin/gmake  -f CMakeFiles/cmTC_7f59f.dir/build.make CMakeFiles/cmTC_7f59f.dir/build
+        gmake[2]: Entering directory '/home/tim/c/ivsing/build/CMakeFiles/CMakeScratch/TryCompile-irIpl7'
+        /usr/bin/cmake: /home/tim/miniconda3/lib/libcurl.so.4: no version information available (required by /usr/bin/cmake)
+        Building C object CMakeFiles/cmTC_7f59f.dir/cmake_hdf5_test.c.o
+        /usr/bin/clang    -MD -MT CMakeFiles/cmTC_7f59f.dir/cmake_hdf5_test.c.o -MF CMakeFiles/cmTC_7f59f.dir/cmake_hdf5_test.c.o.d -o CMakeFiles/cmTC_7f59f.dir/cmake_hdf5_test.c.o -c /home/tim/c/ivsing/build/CMakeFiles/hdf5/cmake_hdf5_test.c
+        /usr/bin/clang: /home/tim/miniconda3/lib/libtinfo.so.6: no version information available (required by /usr/lib/llvm-18/bin/../lib/libLLVM.so.18.1)
+        /usr/bin/clang: /home/tim/miniconda3/lib/libtinfo.so.6: no version information available (required by /lib/x86_64-linux-gnu/libedit.so.2)
+        /home/tim/c/ivsing/build/CMakeFiles/hdf5/cmake_hdf5_test.c:1:10: fatal error: 'hdf5.h' file not found
+            1 | #include <hdf5.h>
+              |          ^~~~~~~~
+        1 error generated.
+        gmake[2]: *** [CMakeFiles/cmTC_7f59f.dir/build.make:79: CMakeFiles/cmTC_7f59f.dir/cmake_hdf5_test.c.o] Error 1
+        gmake[2]: Leaving directory '/home/tim/c/ivsing/build/CMakeFiles/CMakeScratch/TryCompile-irIpl7'
+        gmake[1]: *** [Makefile:127: cmTC_7f59f/fast] Error 2
+        gmake[1]: Leaving directory '/home/tim/c/ivsing/build/CMakeFiles/CMakeScratch/TryCompile-irIpl7'
+        
+      exitCode: 2
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake-3.28/Modules/FindHDF5.cmake:284 (try_compile)"
+      - "/usr/share/cmake-3.28/Modules/FindHDF5.cmake:614 (_HDF5_test_regular_compiler_CXX)"
+      - "CMakeLists.txt:19 (find_package)"
+    directories:
+      source: "/home/tim/c/ivsing/build/CMakeFiles/CMakeScratch/TryCompile-G42zce"
+      binary: "/home/tim/c/ivsing/build/CMakeFiles/CMakeScratch/TryCompile-G42zce"
+    cmakeVariables:
+      CMAKE_CXX_COMPILER_CLANG_SCAN_DEPS: "CMAKE_CXX_COMPILER_CLANG_SCAN_DEPS-NOTFOUND"
+      CMAKE_CXX_FLAGS: ""
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+    buildResult:
+      variable: "HDF5_CXX_COMPILER_NO_INTERROGATE"
+      cached: true
+      stdout: |
+        Change Dir: '/home/tim/c/ivsing/build/CMakeFiles/CMakeScratch/TryCompile-G42zce'
+        
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_85c48/fast
+        /usr/bin/cmake: /home/tim/miniconda3/lib/libcurl.so.4: no version information available (required by /usr/bin/cmake)
+        gmake[1]: Entering directory '/home/tim/c/ivsing/build/CMakeFiles/CMakeScratch/TryCompile-G42zce'
+        /usr/bin/gmake  -f CMakeFiles/cmTC_85c48.dir/build.make CMakeFiles/cmTC_85c48.dir/build
+        gmake[2]: Entering directory '/home/tim/c/ivsing/build/CMakeFiles/CMakeScratch/TryCompile-G42zce'
+        /usr/bin/cmake: /home/tim/miniconda3/lib/libcurl.so.4: no version information available (required by /usr/bin/cmake)
+        Building CXX object CMakeFiles/cmTC_85c48.dir/cmake_hdf5_test.cxx.o
+        /usr/bin/clang++   -std=c++20 -MD -MT CMakeFiles/cmTC_85c48.dir/cmake_hdf5_test.cxx.o -MF CMakeFiles/cmTC_85c48.dir/cmake_hdf5_test.cxx.o.d -o CMakeFiles/cmTC_85c48.dir/cmake_hdf5_test.cxx.o -c /home/tim/c/ivsing/build/CMakeFiles/hdf5/cmake_hdf5_test.cxx
+        /usr/bin/clang++: /home/tim/miniconda3/lib/libtinfo.so.6: no version information available (required by /usr/lib/llvm-18/bin/../lib/libLLVM.so.18.1)
+        /usr/bin/clang++: /home/tim/miniconda3/lib/libtinfo.so.6: no version information available (required by /lib/x86_64-linux-gnu/libedit.so.2)
+        /home/tim/c/ivsing/build/CMakeFiles/hdf5/cmake_hdf5_test.cxx:1:10: fatal error: 'H5Cpp.h' file not found
+            1 | #include <H5Cpp.h>
+              |          ^~~~~~~~~
+        1 error generated.
+        gmake[2]: *** [CMakeFiles/cmTC_85c48.dir/build.make:79: CMakeFiles/cmTC_85c48.dir/cmake_hdf5_test.cxx.o] Error 1
+        gmake[2]: Leaving directory '/home/tim/c/ivsing/build/CMakeFiles/CMakeScratch/TryCompile-G42zce'
+        gmake[1]: *** [Makefile:127: cmTC_85c48/fast] Error 2
+        gmake[1]: Leaving directory '/home/tim/c/ivsing/build/CMakeFiles/CMakeScratch/TryCompile-G42zce'
+        
+      exitCode: 2
+...

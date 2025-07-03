@@ -30,6 +30,7 @@ CMakeFiles/ivslib.dir/src/ivs.cpp.o: /home/tim/c/ivsing/src/ivs.cpp \
   /usr/include/c++/13/bits/cpp_type_traits.h \
   /usr/include/c++/13/bits/cxxabi_forced.h \
   /usr/include/c++/13/bits/cxxabi_init_exception.h \
+  /usr/include/c++/13/bits/deque.tcc \
   /usr/include/c++/13/bits/enable_special_members.h \
   /usr/include/c++/13/bits/erase_if.h \
   /usr/include/c++/13/bits/exception.h \
@@ -85,6 +86,18 @@ CMakeFiles/ivslib.dir/src/ivs.cpp.o: /home/tim/c/ivsing/src/ivs.cpp \
   /usr/include/c++/13/bits/ranges_uninitialized.h \
   /usr/include/c++/13/bits/ranges_util.h \
   /usr/include/c++/13/bits/refwrap.h \
+  /usr/include/c++/13/bits/regex.h \
+  /usr/include/c++/13/bits/regex.tcc \
+  /usr/include/c++/13/bits/regex_automaton.h \
+  /usr/include/c++/13/bits/regex_automaton.tcc \
+  /usr/include/c++/13/bits/regex_compiler.h \
+  /usr/include/c++/13/bits/regex_compiler.tcc \
+  /usr/include/c++/13/bits/regex_constants.h \
+  /usr/include/c++/13/bits/regex_error.h \
+  /usr/include/c++/13/bits/regex_executor.h \
+  /usr/include/c++/13/bits/regex_executor.tcc \
+  /usr/include/c++/13/bits/regex_scanner.h \
+  /usr/include/c++/13/bits/regex_scanner.tcc \
   /usr/include/c++/13/bits/requires_hosted.h \
   /usr/include/c++/13/bits/shared_ptr.h \
   /usr/include/c++/13/bits/shared_ptr_atomic.h \
@@ -99,6 +112,7 @@ CMakeFiles/ivslib.dir/src/ivs.cpp.o: /home/tim/c/ivsing/src/ivs.cpp \
   /usr/include/c++/13/bits/stl_algobase.h \
   /usr/include/c++/13/bits/stl_bvector.h \
   /usr/include/c++/13/bits/stl_construct.h \
+  /usr/include/c++/13/bits/stl_deque.h \
   /usr/include/c++/13/bits/stl_function.h \
   /usr/include/c++/13/bits/stl_heap.h \
   /usr/include/c++/13/bits/stl_iterator.h \
@@ -110,6 +124,7 @@ CMakeFiles/ivslib.dir/src/ivs.cpp.o: /home/tim/c/ivsing/src/ivs.cpp \
   /usr/include/c++/13/bits/stl_pair.h \
   /usr/include/c++/13/bits/stl_raw_storage_iter.h \
   /usr/include/c++/13/bits/stl_relops.h \
+  /usr/include/c++/13/bits/stl_stack.h \
   /usr/include/c++/13/bits/stl_tempbuf.h \
   /usr/include/c++/13/bits/stl_tree.h \
   /usr/include/c++/13/bits/stl_uninitialized.h \
@@ -130,6 +145,7 @@ CMakeFiles/ivslib.dir/src/ivs.cpp.o: /home/tim/c/ivsing/src/ivs.cpp \
   /usr/include/c++/13/bits/valarray_array.tcc \
   /usr/include/c++/13/bits/valarray_before.h \
   /usr/include/c++/13/bits/vector.tcc \
+  /usr/include/c++/13/bitset \
   /usr/include/c++/13/cassert \
   /usr/include/c++/13/cctype \
   /usr/include/c++/13/cerrno \
@@ -149,6 +165,7 @@ CMakeFiles/ivslib.dir/src/ivs.cpp.o: /home/tim/c/ivsing/src/ivs.cpp \
   /usr/include/c++/13/cwctype \
   /usr/include/c++/13/debug/assertions.h \
   /usr/include/c++/13/debug/debug.h \
+  /usr/include/c++/13/deque \
   /usr/include/c++/13/exception \
   /usr/include/c++/13/ext/aligned_buffer.h \
   /usr/include/c++/13/ext/alloc_traits.h \
@@ -184,8 +201,10 @@ CMakeFiles/ivslib.dir/src/ivs.cpp.o: /home/tim/c/ivsing/src/ivs.cpp \
   /usr/include/c++/13/pstl/pstl_config.h \
   /usr/include/c++/13/ranges \
   /usr/include/c++/13/ratio \
+  /usr/include/c++/13/regex \
   /usr/include/c++/13/span \
   /usr/include/c++/13/sstream \
+  /usr/include/c++/13/stack \
   /usr/include/c++/13/stdexcept \
   /usr/include/c++/13/streambuf \
   /usr/include/c++/13/string \
@@ -471,6 +490,7 @@ CMakeFiles/ivslib.dir/src/utilities.cpp.o: /home/tim/c/ivsing/src/utilities.cpp 
   /usr/include/c++/13/bits/cpp_type_traits.h \
   /usr/include/c++/13/bits/cxxabi_forced.h \
   /usr/include/c++/13/bits/cxxabi_init_exception.h \
+  /usr/include/c++/13/bits/deque.tcc \
   /usr/include/c++/13/bits/enable_special_members.h \
   /usr/include/c++/13/bits/erase_if.h \
   /usr/include/c++/13/bits/exception.h \
@@ -526,6 +546,18 @@ CMakeFiles/ivslib.dir/src/utilities.cpp.o: /home/tim/c/ivsing/src/utilities.cpp 
   /usr/include/c++/13/bits/ranges_uninitialized.h \
   /usr/include/c++/13/bits/ranges_util.h \
   /usr/include/c++/13/bits/refwrap.h \
+  /usr/include/c++/13/bits/regex.h \
+  /usr/include/c++/13/bits/regex.tcc \
+  /usr/include/c++/13/bits/regex_automaton.h \
+  /usr/include/c++/13/bits/regex_automaton.tcc \
+  /usr/include/c++/13/bits/regex_compiler.h \
+  /usr/include/c++/13/bits/regex_compiler.tcc \
+  /usr/include/c++/13/bits/regex_constants.h \
+  /usr/include/c++/13/bits/regex_error.h \
+  /usr/include/c++/13/bits/regex_executor.h \
+  /usr/include/c++/13/bits/regex_executor.tcc \
+  /usr/include/c++/13/bits/regex_scanner.h \
+  /usr/include/c++/13/bits/regex_scanner.tcc \
   /usr/include/c++/13/bits/requires_hosted.h \
   /usr/include/c++/13/bits/shared_ptr.h \
   /usr/include/c++/13/bits/shared_ptr_atomic.h \
@@ -540,6 +572,7 @@ CMakeFiles/ivslib.dir/src/utilities.cpp.o: /home/tim/c/ivsing/src/utilities.cpp 
   /usr/include/c++/13/bits/stl_algobase.h \
   /usr/include/c++/13/bits/stl_bvector.h \
   /usr/include/c++/13/bits/stl_construct.h \
+  /usr/include/c++/13/bits/stl_deque.h \
   /usr/include/c++/13/bits/stl_function.h \
   /usr/include/c++/13/bits/stl_heap.h \
   /usr/include/c++/13/bits/stl_iterator.h \
@@ -551,6 +584,7 @@ CMakeFiles/ivslib.dir/src/utilities.cpp.o: /home/tim/c/ivsing/src/utilities.cpp 
   /usr/include/c++/13/bits/stl_pair.h \
   /usr/include/c++/13/bits/stl_raw_storage_iter.h \
   /usr/include/c++/13/bits/stl_relops.h \
+  /usr/include/c++/13/bits/stl_stack.h \
   /usr/include/c++/13/bits/stl_tempbuf.h \
   /usr/include/c++/13/bits/stl_tree.h \
   /usr/include/c++/13/bits/stl_uninitialized.h \
@@ -571,6 +605,7 @@ CMakeFiles/ivslib.dir/src/utilities.cpp.o: /home/tim/c/ivsing/src/utilities.cpp 
   /usr/include/c++/13/bits/valarray_array.tcc \
   /usr/include/c++/13/bits/valarray_before.h \
   /usr/include/c++/13/bits/vector.tcc \
+  /usr/include/c++/13/bitset \
   /usr/include/c++/13/cassert \
   /usr/include/c++/13/cctype \
   /usr/include/c++/13/cerrno \
@@ -590,6 +625,7 @@ CMakeFiles/ivslib.dir/src/utilities.cpp.o: /home/tim/c/ivsing/src/utilities.cpp 
   /usr/include/c++/13/cwctype \
   /usr/include/c++/13/debug/assertions.h \
   /usr/include/c++/13/debug/debug.h \
+  /usr/include/c++/13/deque \
   /usr/include/c++/13/exception \
   /usr/include/c++/13/ext/aligned_buffer.h \
   /usr/include/c++/13/ext/alloc_traits.h \
@@ -625,8 +661,10 @@ CMakeFiles/ivslib.dir/src/utilities.cpp.o: /home/tim/c/ivsing/src/utilities.cpp 
   /usr/include/c++/13/pstl/pstl_config.h \
   /usr/include/c++/13/ranges \
   /usr/include/c++/13/ratio \
+  /usr/include/c++/13/regex \
   /usr/include/c++/13/span \
   /usr/include/c++/13/sstream \
+  /usr/include/c++/13/stack \
   /usr/include/c++/13/stdexcept \
   /usr/include/c++/13/streambuf \
   /usr/include/c++/13/string \
@@ -1033,8 +1071,6 @@ CMakeFiles/ivslib.dir/src/utilities.cpp.o: /home/tim/c/ivsing/src/utilities.cpp 
 
 /usr/include/libintl.h:
 
-/usr/include/inttypes.h:
-
 /usr/include/hdf5/serial/H5version.h:
 
 /usr/lib/llvm-18/lib/clang/18/include/__stddef_size_t.h:
@@ -1109,55 +1145,41 @@ CMakeFiles/ivslib.dir/src/utilities.cpp.o: /home/tim/c/ivsing/src/utilities.cpp 
 
 /usr/include/hdf5/serial/H5FDdirect.h:
 
-/usr/include/c++/13/bits/refwrap.h:
+/usr/lib/llvm-18/lib/clang/18/include/__stddef_null.h:
 
-/usr/include/hdf5/serial/H5Location.h:
+/usr/include/hdf5/serial/H5Exception.h:
 
-/usr/include/c++/13/bits/gslice.h:
+/usr/include/hdf5/serial/H5Epublic.h:
 
-/usr/include/c++/13/bits/uses_allocator_args.h:
+/usr/include/hdf5/serial/H5Dpublic.h:
 
-/usr/include/c++/13/bits/atomic_base.h:
+/usr/include/hdf5/serial/H5DcreatProp.h:
 
-/home/tim/c/ivsing/include/utilities.h:
+/usr/include/hdf5/serial/H5DataSpace.h:
 
-/usr/include/x86_64-linux-gnu/bits/types/mbstate_t.h:
+/usr/include/hdf5/serial/H5DaccProp.h:
 
-/usr/include/c++/13/bits/unique_ptr.h:
+/usr/include/hdf5/serial/H5Cpublic.h:
 
-/usr/lib/llvm-18/lib/clang/18/include/__stdarg_va_arg.h:
+/usr/include/hdf5/serial/H5CompType.h:
 
-/usr/include/c++/13/bits/align.h:
+/usr/include/hdf5/serial/H5CommonFG.h:
 
-/usr/include/c++/13/bits/max_size_type.h:
+/usr/include/hdf5/serial/H5Classes.h:
 
-/usr/include/stdint.h:
+/usr/include/hdf5/serial/H5AtomType.h:
 
-/usr/include/hdf5/serial/H5FDcore.h:
-
-/usr/include/endian.h:
-
-/usr/include/c++/13/bits/unordered_map.h:
-
-/usr/include/c++/13/bits/quoted_string.h:
-
-/usr/include/c++/13/bits/new_allocator.h:
-
-/usr/include/c++/13/bits/stl_uninitialized.h:
+/usr/include/hdf5/serial/H5ArrayType.h:
 
 /usr/include/c++/13/bits/stl_map.h:
 
 /usr/include/c++/13/locale:
 
-/usr/include/x86_64-linux-gnu/bits/mathcalls.h:
+/usr/include/c++/13/bits/stl_stack.h:
 
-/usr/include/c++/13/bits/stl_relops.h:
+/usr/include/c++/13/bits/valarray_before.h:
 
 /usr/include/c++/13/bits/stl_numeric.h:
-
-/usr/include/stdio.h:
-
-/usr/include/c++/13/bits/stl_iterator_base_types.h:
 
 /usr/include/x86_64-linux-gnu/bits/types/struct_sched_param.h:
 
@@ -1173,8 +1195,6 @@ CMakeFiles/ivslib.dir/src/utilities.cpp.o: /home/tim/c/ivsing/src/utilities.cpp 
 
 /usr/include/c++/13/bits/stl_bvector.h:
 
-/usr/include/c++/13/bits/stl_algobase.h:
-
 /usr/include/c++/13/bits/stl_algo.h:
 
 /usr/include/c++/13/cstddef:
@@ -1183,19 +1203,9 @@ CMakeFiles/ivslib.dir/src/utilities.cpp.o: /home/tim/c/ivsing/src/utilities.cpp 
 
 /usr/include/c++/13/valarray:
 
-/usr/include/hdf5/serial/H5DcreatProp.h:
-
-/usr/include/hdf5/serial/H5File.h:
-
-/usr/include/c++/13/bits/uses_allocator.h:
-
-/usr/include/c++/13/bits/postypes.h:
-
-/usr/include/strings.h:
-
-/usr/include/c++/13/iomanip:
-
 /usr/include/c++/13/cstdint:
+
+/usr/include/c++/13/bits/regex_scanner.h:
 
 /usr/include/c++/13/cstdlib:
 
@@ -1207,13 +1217,9 @@ CMakeFiles/ivslib.dir/src/utilities.cpp.o: /home/tim/c/ivsing/src/utilities.cpp 
 
 /usr/include/c++/13/ratio:
 
-/usr/include/c++/13/bits/valarray_before.h:
-
 /usr/include/c++/13/bits/shared_ptr.h:
 
-/usr/include/x86_64-linux-gnu/bits/thread-shared-types.h:
-
-/usr/include/c++/13/bits/string_view.tcc:
+/usr/include/c++/13/bits/stl_deque.h:
 
 /usr/include/x86_64-linux-gnu/bits/floatn-common.h:
 
@@ -1221,15 +1227,67 @@ CMakeFiles/ivslib.dir/src/utilities.cpp.o: /home/tim/c/ivsing/src/utilities.cpp 
 
 /usr/include/c++/13/bits/locale_facets.tcc:
 
-/usr/include/x86_64-linux-gnu/bits/pthreadtypes-arch.h:
+/usr/include/c++/13/bits/regex_executor.tcc:
 
-/usr/include/c++/13/bits/utility.h:
+/usr/include/c++/13/bits/postypes.h:
 
-/usr/include/c++/13/bits/stl_function.h:
+/usr/include/hdf5/serial/H5File.h:
 
-/usr/include/c++/13/tr1/beta_function.tcc:
+/usr/include/c++/13/bits/uses_allocator.h:
+
+/usr/include/strings.h:
+
+/usr/include/c++/13/iomanip:
+
+/usr/include/c++/13/bits/quoted_string.h:
+
+/usr/include/c++/13/bits/unordered_map.h:
+
+/usr/include/x86_64-linux-gnu/bits/types/timer_t.h:
+
+/usr/include/hdf5/serial/H5DxferProp.h:
+
+/usr/include/c++/13/bits/regex_compiler.tcc:
+
+/usr/include/c++/13/bits/allocator.h:
+
+/usr/include/c++/13/unordered_map:
+
+/usr/include/stdio.h:
+
+/usr/include/c++/13/bits/stl_iterator_base_types.h:
+
+/usr/include/c++/13/bits/regex_compiler.h:
+
+/usr/include/c++/13/bits/atomic_base.h:
+
+/usr/include/c++/13/bits/stl_uninitialized.h:
+
+/usr/include/c++/13/bits/new_allocator.h:
+
+/usr/include/c++/13/bits/uses_allocator_args.h:
+
+/usr/include/c++/13/bits/exception_ptr.h:
+
+/usr/include/x86_64-linux-gnu/bits/types/__locale_t.h:
+
+/usr/include/hdf5/serial/H5Rpublic.h:
+
+/usr/include/c++/13/bits/stl_multimap.h:
+
+/usr/include/c++/13/bits/regex.tcc:
+
+/usr/include/hdf5/serial/H5FDsplitter.h:
+
+/usr/include/c++/13/bits/basic_string.h:
+
+/usr/include/c++/13/tr1/poly_laguerre.tcc:
 
 /usr/include/c++/13/bits/ranges_algobase.h:
+
+/usr/include/c++/13/bits/stl_algobase.h:
+
+/usr/include/c++/13/regex:
 
 /usr/include/c++/13/bits/ostream_insert.h:
 
@@ -1245,8 +1303,6 @@ CMakeFiles/ivslib.dir/src/utilities.cpp.o: /home/tim/c/ivsing/src/utilities.cpp 
 
 /usr/include/c++/13/bits/parse_numbers.h:
 
-/usr/include/hdf5/serial/H5Cpublic.h:
-
 /usr/include/c++/13/bits/slice_array.h:
 
 /usr/include/hdf5/serial/H5Include.h:
@@ -1255,7 +1311,13 @@ CMakeFiles/ivslib.dir/src/utilities.cpp.o: /home/tim/c/ivsing/src/utilities.cpp 
 
 /usr/include/c++/13/numbers:
 
-/usr/include/hdf5/serial/H5DaccProp.h:
+/usr/include/c++/13/bits/stl_function.h:
+
+/usr/include/x86_64-linux-gnu/bits/pthreadtypes-arch.h:
+
+/usr/include/c++/13/bits/utility.h:
+
+/usr/include/c++/13/tr1/beta_function.tcc:
 
 /usr/include/c++/13/bits/move.h:
 
@@ -1264,6 +1326,14 @@ CMakeFiles/ivslib.dir/src/utilities.cpp.o: /home/tim/c/ivsing/src/utilities.cpp 
 /usr/lib/llvm-18/lib/clang/18/include/__stddef_wchar_t.h:
 
 /usr/include/c++/13/bits/fs_fwd.h:
+
+/usr/include/c++/13/bits/max_size_type.h:
+
+/usr/include/stdint.h:
+
+/usr/include/hdf5/serial/H5FDcore.h:
+
+/usr/include/endian.h:
 
 /usr/include/c++/13/bits/shared_ptr_atomic.h:
 
@@ -1287,53 +1357,29 @@ CMakeFiles/ivslib.dir/src/utilities.cpp.o: /home/tim/c/ivsing/src/utilities.cpp 
 
 /usr/include/c++/13/bits/chrono.h:
 
-/usr/include/hdf5/serial/H5DataSpace.h:
-
 /usr/include/c++/13/bits/fs_ops.h:
 
 /usr/include/x86_64-linux-gnu/bits/timesize.h:
 
 /usr/include/c++/13/bits/locale_classes.h:
 
-/usr/include/c++/13/bits/exception_ptr.h:
-
-/usr/include/x86_64-linux-gnu/bits/types/__locale_t.h:
-
-/usr/include/hdf5/serial/H5Rpublic.h:
-
-/usr/include/c++/13/bits/stl_multimap.h:
-
 /usr/include/hdf5/serial/H5Gpublic.h:
 
 /usr/include/c++/13/bits/hashtable_policy.h:
-
-/usr/include/hdf5/serial/H5FDsplitter.h:
-
-/usr/include/c++/13/bits/basic_string.h:
-
-/usr/include/c++/13/tr1/poly_laguerre.tcc:
 
 /usr/include/c++/13/bits/ranges_algo.h:
 
 /usr/include/c++/13/bits/invoke.h:
 
-/usr/include/hdf5/serial/H5CommonFG.h:
-
 /usr/include/x86_64-linux-gnu/bits/waitstatus.h:
 
 /usr/include/c++/13/bits/exception_defines.h:
 
-/usr/include/c++/13/bits/valarray_array.h:
-
-/usr/include/c++/13/bits/atomic_lockfree_defines.h:
-
 /usr/include/c++/13/bits/locale_facets.h:
 
-/usr/include/hdf5/serial/H5MMpublic.h:
-
-/usr/include/c++/13/bits/stl_vector.h:
-
 /usr/include/c++/13/bits/stl_tempbuf.h:
+
+/usr/include/c++/13/bits/regex.h:
 
 /usr/include/c++/13/backward/binders.h:
 
@@ -1361,57 +1407,43 @@ CMakeFiles/ivslib.dir/src/utilities.cpp.o: /home/tim/c/ivsing/src/utilities.cpp 
 
 /usr/include/c++/13/forward_list:
 
+/usr/include/c++/13/bits/deque.tcc:
+
 /usr/include/c++/13/bits/istream.tcc:
 
 /usr/include/c++/13/bits/locale_conv.h:
 
 /usr/include/c++/13/bits/basic_string.tcc:
 
+/usr/include/c++/13/bits/refwrap.h:
+
+/usr/include/hdf5/serial/H5Location.h:
+
+/usr/include/c++/13/bits/gslice.h:
+
+/usr/include/c++/13/bits/atomic_lockfree_defines.h:
+
+/usr/include/c++/13/bits/valarray_array.h:
+
 /usr/include/c++/13/bits/fstream.tcc:
-
-/usr/include/x86_64-linux-gnu/bits/uio_lim.h:
-
-/usr/include/c++/13/bits/stream_iterator.h:
-
-/usr/include/x86_64-linux-gnu/bits/posix2_lim.h:
-
-/usr/include/c++/13/bits/enable_special_members.h:
 
 /usr/include/c++/13/bits/stl_raw_storage_iter.h:
 
 /usr/include/c++/13/algorithm:
 
-/usr/include/x86_64-linux-gnu/bits/flt-eval-method.h:
-
-/usr/include/c++/13/bits/streambuf_iterator.h:
-
-/usr/include/c++/13/ostream:
-
-/usr/include/x86_64-linux-gnu/asm/unistd.h:
-
-/usr/include/c++/13/tr1/riemann_zeta.tcc:
-
-/usr/include/hdf5/serial/H5Epublic.h:
-
 /usr/include/c++/13/bits/localefwd.h:
-
-/usr/include/c++/13/bits/valarray_array.tcc:
-
-/usr/include/c++/13/bits/functional_hash.h:
-
-/usr/include/hdf5/serial/H5OcreatProp.h:
-
-/usr/include/hdf5/serial/H5Library.h:
-
-/usr/include/c++/13/bits/indirect_array.h:
-
-/usr/include/errno.h:
 
 /usr/include/c++/13/bits/hash_bytes.h:
 
 /usr/include/hdf5/serial/H5ACpublic.h:
 
 /usr/include/c++/13/array:
+
+/usr/include/x86_64-linux-gnu/bits/types/__sigset_t.h:
+
+/usr/include/hdf5/serial/H5EnumType.h:
+
+/usr/include/c++/13/bits/charconv.h:
 
 /usr/include/x86_64-linux-gnu/bits/errno.h:
 
@@ -1427,6 +1459,16 @@ CMakeFiles/ivslib.dir/src/utilities.cpp.o: /home/tim/c/ivsing/src/utilities.cpp 
 
 /usr/include/c++/13/fstream:
 
+/usr/include/x86_64-linux-gnu/bits/posix2_lim.h:
+
+/usr/include/c++/13/bits/enable_special_members.h:
+
+/usr/include/x86_64-linux-gnu/bits/uio_lim.h:
+
+/usr/include/c++/13/bits/stream_iterator.h:
+
+/usr/include/c++/13/bits/regex_automaton.tcc:
+
 /usr/include/c++/13/backward/auto_ptr.h:
 
 /usr/include/c++/13/bit:
@@ -1440,6 +1482,8 @@ CMakeFiles/ivslib.dir/src/utilities.cpp.o: /home/tim/c/ivsing/src/utilities.cpp 
 /usr/include/c++/13/bits/codecvt.h:
 
 /usr/include/c++/13/bits/stl_tree.h:
+
+/usr/include/c++/13/bits/regex_constants.h:
 
 /usr/include/c++/13/bits/stringfwd.h:
 
@@ -1457,8 +1501,6 @@ CMakeFiles/ivslib.dir/src/utilities.cpp.o: /home/tim/c/ivsing/src/utilities.cpp 
 
 /usr/include/c++/13/tr1/bessel_function.tcc:
 
-/usr/include/c++/13/bits/basic_ios.h:
-
 /usr/include/c++/13/bits/stl_iterator_base_funcs.h:
 
 /usr/include/asm-generic/errno-base.h:
@@ -1473,33 +1515,35 @@ CMakeFiles/ivslib.dir/src/utilities.cpp.o: /home/tim/c/ivsing/src/utilities.cpp 
 
 /home/tim/c/ivsing/include/ivs.h:
 
+/usr/lib/llvm-18/lib/clang/18/include/__stdarg_va_arg.h:
+
+/usr/include/c++/13/bits/align.h:
+
+/home/tim/c/ivsing/include/utilities.h:
+
+/usr/include/x86_64-linux-gnu/bits/types/mbstate_t.h:
+
+/usr/include/c++/13/bits/unique_ptr.h:
+
+/usr/include/hdf5/serial/H5DataSet.h:
+
+/usr/include/c++/13/bits/cxxabi_init_exception.h:
+
 /usr/include/c++/13/bits/exception.h:
 
-/usr/include/hdf5/serial/H5Object.h:
+/usr/include/c++/13/bits/basic_ios.h:
 
-/usr/include/c++/13/bits/valarray_after.h:
-
-/usr/include/c++/13/bits/memory_resource.h:
-
-/usr/include/c++/13/streambuf:
-
-/usr/include/x86_64-linux-gnu/c++/13/bits/c++config.h:
+/usr/include/c++/13/bits/regex_error.h:
 
 /usr/include/x86_64-linux-gnu/bits/types/error_t.h:
 
 /usr/include/c++/13/bits/hashtable.h:
 
-/usr/include/c++/13/bits/forward_list.h:
+/usr/include/x86_64-linux-gnu/c++/13/bits/c++config.h:
 
-/usr/include/x86_64-linux-gnu/c++/13/bits/basic_file.h:
+/usr/include/x86_64-linux-gnu/bits/confname.h:
 
-/usr/include/c++/13/bits/cxxabi_init_exception.h:
-
-/usr/include/hdf5/serial/H5DataSet.h:
-
-/usr/include/c++/13/bits/uniform_int_dist.h:
-
-/usr/include/c++/13/bits/locale_classes.tcc:
+/usr/include/c++/13/bits/locale_facets_nonio.h:
 
 /usr/include/c++/13/bits/fs_dir.h:
 
@@ -1507,15 +1551,71 @@ CMakeFiles/ivslib.dir/src/utilities.cpp.o: /home/tim/c/ivsing/src/utilities.cpp 
 
 /usr/include/c++/13/sstream:
 
-/usr/include/x86_64-linux-gnu/bits/confname.h:
+/usr/include/c++/13/bits/functional_hash.h:
 
-/usr/include/c++/13/bits/locale_facets_nonio.h:
+/usr/include/hdf5/serial/H5OcreatProp.h:
+
+/usr/include/hdf5/serial/H5Library.h:
+
+/usr/include/c++/13/bits/indirect_array.h:
+
+/usr/include/c++/13/bits/valarray_array.tcc:
+
+/usr/include/x86_64-linux-gnu/bits/mathcalls.h:
+
+/usr/include/c++/13/bits/stl_relops.h:
+
+/usr/include/c++/13/stack:
+
+/usr/include/errno.h:
+
+/usr/include/c++/13/bits/forward_list.h:
+
+/usr/include/x86_64-linux-gnu/c++/13/bits/basic_file.h:
+
+/usr/include/c++/13/bits/uniform_int_dist.h:
+
+/usr/include/c++/13/bits/locale_classes.tcc:
+
+/usr/include/hdf5/serial/H5MMpublic.h:
+
+/usr/include/c++/13/bits/stl_vector.h:
+
+/usr/include/x86_64-linux-gnu/bits/flt-eval-method.h:
+
+/usr/include/c++/13/bits/streambuf_iterator.h:
+
+/usr/include/c++/13/ostream:
+
+/usr/include/x86_64-linux-gnu/asm/unistd.h:
+
+/usr/include/c++/13/tr1/riemann_zeta.tcc:
+
+/usr/include/x86_64-linux-gnu/bits/thread-shared-types.h:
+
+/usr/include/c++/13/bits/string_view.tcc:
+
+/usr/include/hdf5/serial/H5Object.h:
+
+/usr/include/c++/13/bits/memory_resource.h:
+
+/usr/include/c++/13/streambuf:
+
+/usr/include/c++/13/bits/valarray_after.h:
 
 /usr/include/c++/13/optional:
 
 /usr/include/c++/13/bits/vector.tcc:
 
 /usr/include/c++/13/variant:
+
+/usr/include/c++/13/bitset:
+
+/usr/include/c++/13/bits/range_access.h:
+
+/usr/include/c++/13/tr1/hypergeometric.tcc:
+
+/usr/include/c++/13/type_traits:
 
 /usr/include/c++/13/bits/cpp_type_traits.h:
 
@@ -1539,8 +1639,6 @@ CMakeFiles/ivslib.dir/src/utilities.cpp.o: /home/tim/c/ivsing/src/utilities.cpp 
 
 /usr/include/c++/13/climits:
 
-/usr/include/hdf5/serial/H5CompType.h:
-
 /usr/include/c++/13/cmath:
 
 /usr/include/x86_64-linux-gnu/c++/13/bits/error_constants.h:
@@ -1548,6 +1646,10 @@ CMakeFiles/ivslib.dir/src/utilities.cpp.o: /home/tim/c/ivsing/src/utilities.cpp 
 /usr/include/c++/13/codecvt:
 
 /usr/include/c++/13/ctime:
+
+/usr/include/inttypes.h:
+
+/usr/include/c++/13/deque:
 
 /usr/include/c++/13/system_error:
 
@@ -1562,6 +1664,14 @@ CMakeFiles/ivslib.dir/src/utilities.cpp.o: /home/tim/c/ivsing/src/utilities.cpp 
 /usr/include/x86_64-linux-gnu/c++/13/bits/c++allocator.h:
 
 /usr/include/c++/13/cstring:
+
+/usr/include/x86_64-linux-gnu/sys/select.h:
+
+/usr/include/hdf5/serial/H5Opublic.h:
+
+/usr/include/hdf5/serial/H5DataType.h:
+
+/usr/include/c++/13/cwchar:
 
 /usr/include/c++/13/debug/assertions.h:
 
@@ -1601,6 +1711,8 @@ CMakeFiles/ivslib.dir/src/utilities.cpp.o: /home/tim/c/ivsing/src/utilities.cpp 
 
 /usr/include/c++/13/iostream:
 
+/usr/include/c++/13/bits/regex_scanner.tcc:
+
 /usr/include/c++/13/istream:
 
 /usr/include/c++/13/bits/ios_base.h:
@@ -1616,6 +1728,14 @@ CMakeFiles/ivslib.dir/src/utilities.cpp.o: /home/tim/c/ivsing/src/utilities.cpp 
 /usr/include/c++/13/exception:
 
 /usr/include/c++/13/pstl/glue_memory_defs.h:
+
+/usr/include/x86_64-linux-gnu/bits/posix1_lim.h:
+
+/usr/include/hdf5/serial/H5Epubgen.h:
+
+/usr/include/c++/13/pstl/glue_numeric_defs.h:
+
+/usr/include/c++/13/bits/regex_automaton.h:
 
 /usr/include/c++/13/bits/mask_array.h:
 
@@ -1651,12 +1771,6 @@ CMakeFiles/ivslib.dir/src/utilities.cpp.o: /home/tim/c/ivsing/src/utilities.cpp 
 
 /usr/include/c++/13/tr1/exp_integral.tcc:
 
-/usr/include/c++/13/bits/range_access.h:
-
-/usr/include/c++/13/tr1/hypergeometric.tcc:
-
-/usr/include/c++/13/type_traits:
-
 /usr/include/c++/13/tr1/legendre_function.tcc:
 
 /usr/lib/llvm-18/lib/clang/18/include/stddef.h:
@@ -1667,23 +1781,27 @@ CMakeFiles/ivslib.dir/src/utilities.cpp.o: /home/tim/c/ivsing/src/utilities.cpp 
 
 /usr/include/c++/13/tr1/special_function_util.h:
 
+/usr/include/c++/13/bits/regex_executor.h:
+
 /usr/include/c++/13/bits/nested_exception.h:
 
 /usr/include/c++/13/tuple:
 
-/usr/include/c++/13/bits/allocator.h:
-
-/usr/include/c++/13/unordered_map:
-
 /usr/include/c++/13/vector:
 
-/usr/include/x86_64-linux-gnu/bits/types/timer_t.h:
+/usr/include/hdf5/serial/H5Attribute.h:
 
-/usr/include/hdf5/serial/H5DxferProp.h:
+/usr/include/c++/13/version:
 
 /usr/include/x86_64-linux-gnu/bits/wordsize.h:
 
 /usr/include/x86_64-linux-gnu/c++/13/bits/atomic_word.h:
+
+/usr/include/hdf5/serial/H5Cpp.h:
+
+/usr/include/c++/13/typeinfo:
+
+/usr/include/x86_64-linux-gnu/c++/13/bits/c++io.h:
 
 /usr/include/c++/13/bits/forward_list.tcc:
 
@@ -1722,45 +1840,3 @@ CMakeFiles/ivslib.dir/src/utilities.cpp.o: /home/tim/c/ivsing/src/utilities.cpp 
 /usr/include/hdf5/serial/H5AbstractDs.h:
 
 /usr/include/hdf5/serial/H5Apublic.h:
-
-/usr/include/hdf5/serial/H5ArrayType.h:
-
-/usr/include/hdf5/serial/H5AtomType.h:
-
-/usr/include/c++/13/version:
-
-/usr/include/hdf5/serial/H5Attribute.h:
-
-/usr/include/hdf5/serial/H5Classes.h:
-
-/usr/include/c++/13/typeinfo:
-
-/usr/include/x86_64-linux-gnu/c++/13/bits/c++io.h:
-
-/usr/include/hdf5/serial/H5Cpp.h:
-
-/usr/include/x86_64-linux-gnu/sys/select.h:
-
-/usr/include/hdf5/serial/H5Opublic.h:
-
-/usr/include/c++/13/cwchar:
-
-/usr/include/hdf5/serial/H5DataType.h:
-
-/usr/include/hdf5/serial/H5Dpublic.h:
-
-/usr/include/x86_64-linux-gnu/bits/types/__sigset_t.h:
-
-/usr/include/c++/13/bits/charconv.h:
-
-/usr/include/hdf5/serial/H5EnumType.h:
-
-/usr/include/x86_64-linux-gnu/bits/posix1_lim.h:
-
-/usr/include/c++/13/pstl/glue_numeric_defs.h:
-
-/usr/include/hdf5/serial/H5Epubgen.h:
-
-/usr/lib/llvm-18/lib/clang/18/include/__stddef_null.h:
-
-/usr/include/hdf5/serial/H5Exception.h:
