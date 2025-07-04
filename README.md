@@ -36,8 +36,6 @@ Bias calc (V)	Current (A)
 
 ```
 
-It is convenient to open them by a text editor but not efficient for storing data. This is project aimas to extract numeric data from a large number of I-V curves written by Nanonis software and store them in a popular binary format `h5`. This is much more lightweight and data transfer can be much more expeditious. 
-
 
 ## Table of Contents
 
